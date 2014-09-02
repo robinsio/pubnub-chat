@@ -1,0 +1,17 @@
+<form role="form">
+    <div class="form-group">
+        <input type="text" class="form-control" id="name" ng-model="message.name" placeholder="Enter Name">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="message" ng-model="message.message" placeholder="Enter Message">
+    </div>
+
+    <button type="submit" class="btn btn-default" ng-click="save(message)">Send</button>
+</form>
+
+<hr>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="message in messages"><span class="label label-success">{{message.name}}</span> {{message.message}}</li>
+</ul>
